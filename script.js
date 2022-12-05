@@ -24,3 +24,10 @@ for(let i = 0; i < showBtns.length; i++)
 closeBtn.addEventListener('click', closeModal);
 //when it is click on overlay
 overlay.addEventListener('click', closeModal);
+
+// ESC key
+document.addEventListener('keydown', function (e){
+    if(e.key === 'Escape' && !overlay.classList.contains('hidden')){
+        closeModal();
+    }
+})
